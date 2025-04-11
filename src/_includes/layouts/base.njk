@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default('de') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | Variant Release Date Scheduler</title>
+    <link rel="stylesheet" href="/fonts/inter.css">
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    {% if extraCSS %}
+    <style>
+        {{ extraCSS | safe }}
+    </style>
+    {% endif %}
+</head>
+<body>
+    {% include "partials/header.njk" %}
+
+    {{ content | safe }}
+
+    {% include "partials/footer.njk" %}
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
