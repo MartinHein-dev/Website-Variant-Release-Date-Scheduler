@@ -1,56 +1,421 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Variant Release Date Scheduler</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variant Release Date Scheduler | Shopify App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Variant Release Date Scheduler</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">Über die App</a></li>
-        <li><a href="#tutorials">Tutorials</a></li>
-        <li><a href="#legal">Rechtliches</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="container" >
+            <div class="header-content">
+                <div class="logo">
+                    <img src="https://placehold.co/200x50/5c6ac4/ffffff?text=Variant+Scheduler" alt="Variant Release Date Scheduler Logo">
+                </div>
+                <nav>
+                    <ul class="main-nav">
+                        <li><a href="#features" data-i18n="nav.features">Funktionen</a></li>
+                        <li><a href="#pricing" data-i18n="nav.pricing">Preise</a></li>
+                        <li><a href="#testimonials" data-i18n="nav.testimonials">Erfahrungsberichte</a></li>
+                        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+                        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switcher">
+                    <button id="lang-de">DE</button>
+                    <button id="lang-en">EN</button>
+                </div>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <section id="about">
-      <h2>Wozu ist diese App gut?</h2>
-      <p>Mit der Shopify App "Variant Release Date Scheduler" können Händler festlegen, wann einzelne Produktvarianten wieder verfügbar sein sollen. Die App blendet automatisch den "In den Warenkorb"-Button aus und zeigt ihn zum richtigen Zeitpunkt wieder an.</p>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 data-i18n="hero.title">Terminierte Produktvarianten für Ihren Shopify-Shop</h1>
+                    <p data-i18n="hero.subtitle">Planen Sie die Veröffentlichung von Produktvarianten und schaffen Sie Vorfreude bei Ihren Kunden.</p>
+                    <div class="cta-buttons">
+                        <a href="https://apps.shopify.com" class="btn btn-primary" data-i18n="hero.cta">Jetzt installieren</a>
+                        <a href="#features" class="btn btn-secondary" data-i18n="hero.learn">Mehr erfahren</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://placehold.co/600x400/5c6ac4/ffffff?text=Variant+Scheduler+Demo" alt="App Demo">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="tutorials">
-      <h2>Tutorials</h2>
-      <ul>
-        <li><a href="tutorials/einrichtung.html">Erste Schritte & Einrichtung</a></li>
-        <li><a href="tutorials/metafields.html">Metafields verwenden</a></li>
-        <li><a href="tutorials/marketing.html">Marketing-Tipps zur App</a></li>
-      </ul>
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="features.title">Funktionen</h2>
+                <p data-i18n="features.subtitle">Entdecken Sie, wie Variant Release Date Scheduler Ihren Shop verbessert</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 data-i18n="features.feature1.title">Geplante Veröffentlichung</h3>
+                    <p data-i18n="features.feature1.desc">Machen Sie Produktvarianten zu einem bestimmten Zeitpunkt in Ihrem Shop verfügbar und automatisieren Sie Produkteinführungen.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 data-i18n="features.feature2.title">Voransicht vor Veröffentlichung</h3>
+                    <p data-i18n="features.feature2.desc">Varianten sind bereits im Shop sichtbar, können aber erst nach dem festgelegten Datum gekauft werden.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-i18n="features.feature3.title">Schnelle Einrichtung</h3>
+                    <p data-i18n="features.feature3.desc">In nur 5 Minuten konfiguriert – keine technischen Kenntnisse erforderlich.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 data-i18n="features.feature4.title">Countdown-Timer</h3>
+                    <p data-i18n="features.feature4.desc">Erzeugen Sie Spannung mit einem Countdown bis zur Veröffentlichung der Variante.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 data-i18n="features.feature5.title">Zeitzonen-Unterstützung</h3>
+                    <p data-i18n="features.feature5.desc">Planen Sie Veröffentlichungen basierend auf lokalen Zeitzonen Ihrer Kunden.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-i18n="features.feature6.title">Interessenmetriken</h3>
+                    <p data-i18n="features.feature6.desc">Verfolgen Sie, wie viele Kunden sich für kommende Varianten interessieren.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="legal">
-      <h2>Rechtliches</h2>
-      <ul>
-        <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
-        <li><a href="agb.html">AGB</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-      </ul>
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="pricing.title">Preise</h2>
+                <p data-i18n="pricing.subtitle">Transparente Preisgestaltung für alle Shop-Größen</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 data-i18n="pricing.basic.title">Basis</h3>
+                        <div class="price">
+                            <span class="amount">9,99€</span>
+                            <span class="period" data-i18n="pricing.basic.period">/Monat</span>
+                        </div>
+                    </div>
+                    <div class="price-features">
+                        <ul>
+                            <li data-i18n="pricing.basic.feature1">Bis zu 20 geplante Varianten</li>
+                            <li data-i18n="pricing.basic.feature2">Grundlegende Countdown-Funktion</li>
+                            <li data-i18n="pricing.basic.feature3">E-Mail-Support</li>
+                        </ul>
+                    </div>
+                    <div class="price-cta">
+                        <a href="https://apps.shopify.com" class="btn btn-outline" data-i18n="pricing.basic.cta">Jetzt starten</a>
+                    </div>
+                </div>
+                <div class="price-card popular">
+                    <div class="popular-tag" data-i18n="pricing.popular">Beliebt</div>
+                    <div class="price-header">
+                        <h3 data-i18n="pricing.pro.title">Pro</h3>
+                        <div class="price">
+                            <span class="amount">24,99€</span>
+                            <span class="period" data-i18n="pricing.pro.period">/Monat</span>
+                        </div>
+                    </div>
+                    <div class="price-features">
+                        <ul>
+                            <li data-i18n="pricing.pro.feature1">Unbegrenzte geplante Varianten</li>
+                            <li data-i18n="pricing.pro.feature2">Erweiterte Countdown-Optionen</li>
+                            <li data-i18n="pricing.pro.feature3">Prioritäts-Support</li>
+                            <li data-i18n="pricing.pro.feature4">Kundeninteresse-Tracking</li>
+                            <li data-i18n="pricing.pro.feature5">Anpassbare Benachrichtigungen</li>
+                        </ul>
+                    </div>
+                    <div class="price-cta">
+                        <a href="https://apps.shopify.com" class="btn btn-primary" data-i18n="pricing.pro.cta">Pro wählen</a>
+                    </div>
+                </div>
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3 data-i18n="pricing.business.title">Business</h3>
+                        <div class="price">
+                            <span class="amount">49,99€</span>
+                            <span class="period" data-i18n="pricing.business.period">/Monat</span>
+                        </div>
+                    </div>
+                    <div class="price-features">
+                        <ul>
+                            <li data-i18n="pricing.business.feature1">Alles aus Pro</li>
+                            <li data-i18n="pricing.business.feature2">Multistore-Unterstützung</li>
+                            <li data-i18n="pricing.business.feature3">API-Zugang</li>
+                            <li data-i18n="pricing.business.feature4">Dedizierter Account Manager</li>
+                            <li data-i18n="pricing.business.feature5">Erweiterte Analyse-Tools</li>
+                        </ul>
+                    </div>
+                    <div class="price-cta">
+                        <a href="https://apps.shopify.com" class="btn btn-outline" data-i18n="pricing.business.cta">Business wählen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Kontakt</h2>
-      <p>Bei Fragen oder Anmerkungen erreichst du uns unter <a href="mailto:support@variant-release.app">support@variant-release.app</a>.</p>
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="testimonials.title">Erfahrungsberichte</h2>
+                <p data-i18n="testimonials.subtitle">Was unsere Kunden über Variant Release Date Scheduler sagen</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slides">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                <p data-i18n="testimonials.testimonial1.text">"Die App hat unseren Produktstart revolutioniert. Wir konnten die Aufmerksamkeit unserer Kunden auf kommende Produkte lenken und den Umsatz am Erscheinungstag um 40% steigern."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="https://placehold.co/60x60/5c6ac4/ffffff?text=MM" alt="Testimonial Author">
+                                <div class="author-info">
+                                    <h4 data-i18n="testimonials.testimonial1.name">Markus Müller</h4>
+                                    <p data-i18n="testimonials.testimonial1.company">Müller Mode GmbH</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                <p data-i18n="testimonials.testimonial2.text">"Einfach zu bedienen und unglaublich effektiv. Die Vorschaufunktion für Varianten hat die Vorfreude auf unsere limitierten Editionen enorm gesteigert."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="https://placehold.co/60x60/5c6ac4/ffffff?text=LK" alt="Testimonial Author">
+                                <div class="author-info">
+                                    <h4 data-i18n="testimonials.testimonial2.name">Laura Klein</h4>
+                                    <p data-i18n="testimonials.testimonial2.company">Trendy Treasures</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="testimonial-text">
+                                <p data-i18n="testimonials.testimonial3.text">"Diese App war genau das, was wir für unsere saisonalen Kollektionen brauchten. Die Einrichtung war super einfach und der Support ist erstklassig."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="https://placehold.co/60x60/5c6ac4/ffffff?text=TS" alt="Testimonial Author">
+                                <div class="author-info">
+                                    <h4 data-i18n="testimonials.testimonial3.name">Thomas Schmidt</h4>
+                                    <p data-i18n="testimonials.testimonial3.company">Outdoor Life</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-testimonial"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="next-testimonial"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Variant Release Date Scheduler</p>
-  </footer>
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="faq.title">Häufig gestellte Fragen</h2>
+                <p data-i18n="faq.subtitle">Antworten auf Ihre Fragen zum Variant Release Date Scheduler</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-i18n="faq.q1">Wie funktioniert der Variant Release Date Scheduler?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a1">Die App ermöglicht es Ihnen, ein Datum und eine Uhrzeit festzulegen, an dem Produktvarianten für den Kauf freigeschaltet werden. Die Varianten werden im Shop angezeigt, können jedoch erst nach dem festgelegten Zeitpunkt in den Warenkorb gelegt werden.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-i18n="faq.q2">Ist die Installation kompliziert?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a2">Nein, die Installation und Konfiguration dauert nur etwa 5 Minuten. Nach der Installation aus dem Shopify App Store müssen Sie lediglich die Produkte auswählen und die Freigabezeiten für die Varianten festlegen.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-i18n="faq.q3">Wie werden die Kunden über neue Varianten informiert?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a3">Die App zeigt einen Countdown auf der Produktseite an. Zudem können Kunden sich für Benachrichtigungen anmelden, um per E-Mail informiert zu werden, sobald die Variante verfügbar ist.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-i18n="faq.q4">Mit welchen Shopify-Themes ist die App kompatibel?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a4">Unsere App ist mit allen aktuellen Shopify-Themes kompatibel. Bei älteren oder stark angepassten Themes kann eine zusätzliche Anpassung erforderlich sein, für die unser Support-Team Ihnen gerne zur Verfügung steht.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-i18n="faq.q5">Gibt es eine kostenlose Testphase?</h3>
+                        <span class="faq-icon"><i class="fas fa-plus"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.a5">Ja, Sie können die App 14 Tage lang kostenlos testen, bevor Sie sich für ein Abonnement entscheiden. Während der Testphase stehen Ihnen alle Funktionen des Pro-Pakets zur Verfügung.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-i18n="contact.title">Kontakt</h2>
+                <p data-i18n="contact.subtitle">Haben Sie Fragen? Kontaktieren Sie uns!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 data-i18n="contact.email">E-Mail</h4>
+                            <p>support@variantscheduler.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 data-i18n="contact.phone">Telefon</h4>
+                            <p>+49 123 456789</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4 data-i18n="contact.hours">Geschäftszeiten</h4>
+                            <p data-i18n="contact.hours_detail">Mo-Fr: 9:00 - 17:00 Uhr</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" data-i18n="contact.form.name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-i18n="contact.form.email">E-Mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-i18n="contact.form.subject">Betreff</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-i18n="contact.form.message">Nachricht</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">Nachricht senden</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://placehold.co/200x50/5c6ac4/ffffff?text=Variant+Scheduler" alt="Variant Release Date Scheduler Logo">
+                    <p data-i18n="footer.tagline">Machen Sie Ihre Produkteinführungen spannender</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.product">Produkt</h4>
+                        <ul>
+                            <li><a href="#features" data-i18n="footer.features">Funktionen</a></li>
+                            <li><a href="#pricing" data-i18n="footer.pricing">Preise</a></li>
+                            <li><a href="#faq" data-i18n="footer.faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.resources">Ressourcen</h4>
+                        <ul>
+                            <li><a href="#" data-i18n="footer.docs">Dokumentation</a></li>
+                            <li><a href="#" data-i18n="footer.blog">Blog</a></li>
+                            <li><a href="#" data-i18n="footer.tutorials">Tutorials</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h4 data-i18n="footer.company">Unternehmen</h4>
+                        <ul>
+                            <li><a href="about.html" data-i18n="footer.about">Über uns</a></li>
+                            <li><a href="privacy.html" data-i18n="footer.privacy">Datenschutz</a></li>
+                            <li><a href="terms.html" data-i18n="footer.terms">AGB</a></li>
+                            <li><a href="imprint.html" data-i18n="footer.imprint">Impressum</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer.follow">Folgen Sie uns</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2025 Variant Release Date Scheduler. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
