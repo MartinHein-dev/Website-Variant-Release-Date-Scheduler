@@ -424,11 +424,18 @@ header {
   border-bottom: none;
 }
 
+.price-features ul li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
 .price-features ul li:before {
   content: "✓";
   color: var(--success);
   font-weight: bold;
   margin-right: 0.5rem;
+  position: absolute;
+  left: 0;
 }
 
 .price-cta {
@@ -574,7 +581,7 @@ footer {
 
 .footer-content {
   display: grid;
-  grid-template-columns: 1.5fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -684,7 +691,7 @@ footer {
   }
 
   .footer-links {
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 2rem;
   }
 }
