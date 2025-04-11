@@ -229,8 +229,11 @@ header {
   transition: var(--transition);
 }
 
-.language-switcher button:hover {
-  background-color: var(--neutral-lighter);
+.language-switcher button:hover,
+.language-switcher button.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
 }
 
 .mobile-menu-toggle {
@@ -294,7 +297,7 @@ header {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -432,116 +435,9 @@ header {
   text-align: center;
 }
 
-/* Testimonials Section */
-.testimonials {
-  background-color: white;
-}
-
-.testimonial-slider {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.testimonial-slides {
-  position: relative;
-  height: 300px;
-  overflow: hidden;
-}
-
-.testimonial-slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.testimonial-slide.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-.testimonial-content {
-  background-color: var(--neutral-lighter);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.testimonial-text {
-  font-style: italic;
-  color: var(--neutral-dark);
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.testimonial-author img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.author-info h4 {
-  margin-bottom: 0.25rem;
-  color: var(--primary-dark);
-}
-
-.author-info p {
-  color: var(--neutral);
-  margin-bottom: 0;
-}
-
-.testimonial-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.prev-testimonial, .next-testimonial {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  color: var(--primary);
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-.testimonial-dots {
-  display: flex;
-  gap: 0.5rem;
-  margin: 0 1rem;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--neutral-light);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.dot.active {
-  background-color: var(--primary);
-}
-
 /* FAQ Section */
 .faq {
-  background-color: var(--neutral-lighter);
+  background-color: white;
 }
 
 .faq-container {
@@ -550,7 +446,7 @@ header {
 }
 
 .faq-item {
-  background-color: white;
+  background-color: var(--neutral-lighter);
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
   overflow: hidden;
@@ -594,7 +490,7 @@ header {
 
 /* Contact Section */
 .contact {
-  background-color: white;
+  background-color: var(--neutral-lighter);
 }
 
 .contact-grid {
@@ -871,4 +767,49 @@ footer {
 
 .mobile-menu-footer {
   margin-top: 2rem;
+}
+
+/* Legal Pages */
+.page-content {
+  padding: 3rem 0;
+}
+
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.legal-content h1 {
+  margin-bottom: 2rem;
+  color: var(--primary-dark);
+}
+
+.legal-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+  font-size: 1.5rem;
+}
+
+.legal-content p {
+  margin-bottom: 1.5rem;
+}
+
+.legal-content ul, .legal-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.legal-content li {
+  margin-bottom: 0.5rem;
+}
+
+.legal-content a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.legal-content a:hover {
+  color: var(--primary-dark);
 }
