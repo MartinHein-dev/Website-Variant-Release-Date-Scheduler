@@ -1,0 +1,2 @@
+mkdir -p src/_github
+touch src/_github/.nojekyll

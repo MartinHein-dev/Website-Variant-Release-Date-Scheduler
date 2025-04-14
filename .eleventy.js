@@ -5,6 +5,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/fontawesome");
 
+  // WICHTIG: Erstellt eine .nojekyll-Datei, damit GitHub Pages die Dateien nicht mit Jekyll verarbeitet
+  eleventyConfig.addPassthroughCopy({ "src/_github/.nojekyll": ".nojekyll" });
+
   // Eigene Ausgabeverzeichnis konfigurieren
   return {
     dir: {
