@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Build static files
         id: build
-        run: npm run build
+        run: npm install && npm run build
 
       - name: Deploy to GitHub Pages 🚀
         id: deployment
