@@ -23,4 +23,4 @@ jobs:
       - name: Deploy to GitHub Pages 🚀
         uses: actions/upload-pages-artifact@v3
         with:
-          folder: _site
+          path: _site
