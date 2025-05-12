@@ -116,7 +116,7 @@ const translations = {
 
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize language
-  const defaultLang = 'de';
+  const defaultLang = 'en';
   let currentLang = localStorage.getItem('language') || defaultLang;
 
   // Set initial language
